@@ -11,4 +11,8 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   spec.vendored_libraries = 'lib/libStaticLibA.a'
   spec.libraries = 'c++'
+  spec.xcconfig = {
+    'CLANG_CXX_LANGUAGE_STANDARD' => 'c++11',
+    'CLANG_CXX_LIBRARY' => 'libc++'
+  }
 end
