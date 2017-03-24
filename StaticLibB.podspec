@@ -6,11 +6,11 @@ Pod::Spec.new do |spec|
   spec.summary      = 'Test'
   spec.source       = { :git => 'https://github.com/lappp9/StaticLibB.git', :tag => '0.0.3' }
   spec.homepage     = 'https://google.com/'
-  spec.source_files = 'StaticLibB/**/*'
+  spec.source_files = 'StaticLibB/**/*', 'include/**/*'
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+  spec.vendored_libraries = 'lib/libStaticLibA.a'
 
-  spec.subspec 'StaticLibA' do |sc|
-    sc.source_files = 'include/*.h'
-    sc.vendored_libraries = 'lib/libStaticLibA.a'
-  end
+ # spec.subspec 'StaticLibA' do |sc|
+  #  sc.source_files = 'include/*.h'
+  #end
 end
