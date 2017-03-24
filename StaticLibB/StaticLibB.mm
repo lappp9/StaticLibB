@@ -9,6 +9,8 @@
 #import "StaticLibB.h"
 #import "StaticLibA.h"
 
+#import "SomeExtremeCode.hpp"
+
 @implementation StaticLibB
 - (void)doSomething;
 {
@@ -16,5 +18,9 @@
     
     StaticLibA *a = [[StaticLibA alloc] init];
     [a doSomething];
+    
+    NSLog(@"Then i'll call some c++");
+    
+    doSomethingExtreme();
 }
 @end

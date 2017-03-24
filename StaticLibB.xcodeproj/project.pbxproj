@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2F22BE1E85DA24008E7F83 /* SomeExtremeCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */; };
 		AEB3CE6B1E849BBF0098118B /* libStaticLibA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB3CE6A1E849BBF0098118B /* libStaticLibA.a */; };
-		AEE2A6F01E8473410051F098 /* StaticLibB.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE2A6EF1E8473410051F098 /* StaticLibB.m */; };
+		AEE2A6F01E8473410051F098 /* StaticLibB.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEE2A6EF1E8473410051F098 /* StaticLibB.mm */; };
 		AEE2A6F11E8473410051F098 /* StaticLibB.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AEE2A6EE1E8473410051F098 /* StaticLibB.h */; };
 /* End PBXBuildFile section */
 
@@ -26,10 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SomeExtremeCode.cpp; sourceTree = "<group>"; };
+		AE2F22BD1E85DA24008E7F83 /* SomeExtremeCode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SomeExtremeCode.hpp; sourceTree = "<group>"; };
 		AEB3CE6A1E849BBF0098118B /* libStaticLibA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStaticLibA.a; path = lib/libStaticLibA.a; sourceTree = "<group>"; };
 		AEE2A6EB1E8473410051F098 /* libStaticLibB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticLibB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE2A6EE1E8473410051F098 /* StaticLibB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticLibB.h; sourceTree = "<group>"; };
-		AEE2A6EF1E8473410051F098 /* StaticLibB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticLibB.m; sourceTree = "<group>"; };
+		AEE2A6EF1E8473410051F098 /* StaticLibB.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = StaticLibB.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				AEE2A6EE1E8473410051F098 /* StaticLibB.h */,
-				AEE2A6EF1E8473410051F098 /* StaticLibB.m */,
+				AEE2A6EF1E8473410051F098 /* StaticLibB.mm */,
+				AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */,
+				AE2F22BD1E85DA24008E7F83 /* SomeExtremeCode.hpp */,
 			);
 			path = StaticLibB;
 			sourceTree = "<group>";
@@ -136,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE2A6F01E8473410051F098 /* StaticLibB.m in Sources */,
+				AEE2A6F01E8473410051F098 /* StaticLibB.mm in Sources */,
+				AE2F22BE1E85DA24008E7F83 /* SomeExtremeCode.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +248,10 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/lib",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -259,7 +268,10 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/lib",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
