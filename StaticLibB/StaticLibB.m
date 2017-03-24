@@ -7,7 +7,14 @@
 //
 
 #import "StaticLibB.h"
+#import "StaticLibA.h"
 
 @implementation StaticLibB
-
+- (void)doSomething;
+{
+    NSLog(@"First I print in B and then I'll call A");
+    
+    StaticLibA *a = [[StaticLibA alloc] init];
+    [a doSomething];
+}
 @end

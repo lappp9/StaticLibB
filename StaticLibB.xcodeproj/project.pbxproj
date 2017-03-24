@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEB3CE6B1E849BBF0098118B /* libStaticLibA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB3CE6A1E849BBF0098118B /* libStaticLibA.a */; };
 		AEE2A6F01E8473410051F098 /* StaticLibB.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE2A6EF1E8473410051F098 /* StaticLibB.m */; };
 		AEE2A6F11E8473410051F098 /* StaticLibB.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AEE2A6EE1E8473410051F098 /* StaticLibB.h */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AEB3CE6A1E849BBF0098118B /* libStaticLibA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libStaticLibA.a; path = lib/libStaticLibA.a; sourceTree = "<group>"; };
 		AEE2A6EB1E8473410051F098 /* libStaticLibB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticLibB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE2A6EE1E8473410051F098 /* StaticLibB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticLibB.h; sourceTree = "<group>"; };
 		AEE2A6EF1E8473410051F098 /* StaticLibB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticLibB.m; sourceTree = "<group>"; };
@@ -35,17 +37,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEB3CE6B1E849BBF0098118B /* libStaticLibA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEB3CE691E849BBE0098118B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEB3CE6A1E849BBF0098118B /* libStaticLibA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEE2A6E21E8473410051F098 = {
 			isa = PBXGroup;
 			children = (
 				AEE2A6ED1E8473410051F098 /* StaticLibB */,
 				AEE2A6EC1E8473410051F098 /* Products */,
+				AEB3CE691E849BBE0098118B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +235,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = FPLWU74ZS9;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/lib",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -233,6 +252,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEVELOPMENT_TEAM = FPLWU74ZS9;
+				HEADER_SEARCH_PATHS = $SOURCE_ROOT/include;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/lib",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -258,6 +284,7 @@
 				AEE2A6F61E8473410051F098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
