@@ -8,7 +8,9 @@ Pod::Spec.new do |spec|
   spec.homepage     = 'https://google.com/'
   spec.source_files = 'StaticLibB/**/*'
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
-  spec.header_dir = 'include'
 
-
+  spec.subspec 'StaticLibA' do |sc|
+    sc.source_files = 'include/*.h'
+    sc.vendored_libraries = 'lib/libStaticLibA.a'
+  end
 end
