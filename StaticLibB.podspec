@@ -11,5 +11,6 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   spec.vendored_libraries = 'lib/libStaticLibA.a'
   spec.libraries = 'stdc++'
+  spec.xcconfig = { 'ONLY_ACTIVE_ARCH' => 'YES' }
   
 end
