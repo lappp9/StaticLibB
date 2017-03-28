@@ -13,7 +13,8 @@ Pod::Spec.new do |spec|
     'OTHER_LDFLAGS' => '-lObjC -lc++',
 #    'CLANG_CXX_LIBRARY' => 'libstdc++',
 #    'ONLY_ACTIVE_ARCH' => 'NO'
-#  }
+  }
+  spec.libraries = "c++"
 
   spec.vendored_libraries = 'lib/libStaticLibA.a'
 end
