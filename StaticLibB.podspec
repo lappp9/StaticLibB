@@ -10,12 +10,11 @@ Pod::Spec.new do |spec|
   spec.private_header_files = 'include/**/*'
 
   spec.pod_target_xcconfig = { 
-    'OTHER_LDFLAGS' => '-lObjC',
-    'CLANG_CXX_LIBRARY' => 'libstdc++',
-    'ONLY_ACTIVE_ARCH' => 'NO'
-  }
+    'OTHER_LDFLAGS' => '-lObjC -lc++',
+#    'CLANG_CXX_LIBRARY' => 'libstdc++',
+#    'ONLY_ACTIVE_ARCH' => 'NO'
+#  }
 
   spec.vendored_libraries = 'lib/libStaticLibA.a'
-
 end
 
