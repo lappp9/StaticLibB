@@ -7,7 +7,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/lappp9/StaticLibB.git', :tag => '0.0.5' }
   spec.homepage     = 'https://google.com/'
   spec.source_files = 'StaticLibB/**/*', 
-  spec.spec.private_header_files = 'include/**/*'
+  spec.private_header_files = 'include/**/*'
 
   spec.pod_target_xcconfig = { 
     'OTHER_LDFLAGS' => '-lObjC -lstdc++',
