@@ -7,24 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AE2F22BE1E85DA24008E7F83 /* SomeExtremeCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */; };
+		AE2F22BE1E85DA24008E7F83 /* SomeExtremeCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */; settings = {COMPILER_FLAGS = "-fvisibility=hidden"; }; };
 		AEB3CE6B1E849BBF0098118B /* libStaticLibA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEB3CE6A1E849BBF0098118B /* libStaticLibA.a */; };
 		AEE2A6F01E8473410051F098 /* StaticLibB.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEE2A6EF1E8473410051F098 /* StaticLibB.mm */; };
-		AEE2A6F11E8473410051F098 /* StaticLibB.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AEE2A6EE1E8473410051F098 /* StaticLibB.h */; };
+		AEFA4CF21E89F16900F9B7EB /* StaticLibB.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE2A6EE1E8473410051F098 /* StaticLibB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEFA4CF31E89F16900F9B7EB /* SomeExtremeCode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AE2F22BD1E85DA24008E7F83 /* SomeExtremeCode.hpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		AEE2A6E91E8473410051F098 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				AEE2A6F11E8473410051F098 /* StaticLibB.h in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SomeExtremeCode.cpp; sourceTree = "<group>"; };
@@ -77,22 +65,34 @@
 			children = (
 				AEE2A6EE1E8473410051F098 /* StaticLibB.h */,
 				AEE2A6EF1E8473410051F098 /* StaticLibB.mm */,
-				AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */,
 				AE2F22BD1E85DA24008E7F83 /* SomeExtremeCode.hpp */,
+				AE2F22BC1E85DA24008E7F83 /* SomeExtremeCode.cpp */,
 			);
 			path = StaticLibB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AEFA4CF11E89F16000F9B7EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFA4CF21E89F16900F9B7EB /* StaticLibB.h in Headers */,
+				AEFA4CF31E89F16900F9B7EB /* SomeExtremeCode.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		AEE2A6EA1E8473410051F098 /* StaticLibB */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE2A6F41E8473410051F098 /* Build configuration list for PBXNativeTarget "StaticLibB" */;
 			buildPhases = (
+				AEFA4CF11E89F16000F9B7EB /* Headers */,
 				AEE2A6E71E8473410051F098 /* Sources */,
 				AEE2A6E81E8473410051F098 /* Frameworks */,
-				AEE2A6E91E8473410051F098 /* CopyFiles */,
 			);
 			buildRules = (
 			);
